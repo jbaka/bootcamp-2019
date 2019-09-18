@@ -43,6 +43,19 @@ Hint: use the `any` function.
 
 ```{asis}
 ### Answer
+year<-2002
+if(any(gapminder$year == year)){
+   print(paste("Record(s) for",year,"found."))
+} else {
+  print(paste("No records for",year))
+}
+
+year<-2012
+if(any(gapminder$year == year)){
+   print(paste("Record(s) for",year,"found."))
+} else {
+  print(paste("No records for year",year))
+}
 ```
 
 ```{r}

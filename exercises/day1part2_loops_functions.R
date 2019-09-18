@@ -186,17 +186,18 @@ report_mean_sd <-
  
  report_summary <- 
      function(continent) {
-         var <- gapminder[[lifeExp]][gapminder$continent == continent] #define var as life expecency where continetn = continent
+         var <- gapminder[['lifeExp']][gapminder$continent == continent] #define var as life expecency where continetn = continent
          meanLE <- mean(var)
          medianLE <- median(var)
          minLE <- min(var)
+         maxLE <- max(var)
          cat('Continent:', continent,
              '\nMin life expectancy:', minLE,
              '\nMax life expectancy:', maxLE,
              '\nMean life expectancy:', meanLE,
              '\nMedian Life expectancy:', medianLE)
      }
- attach(gapminder)
+
 report_summary('Africa')
     
     
